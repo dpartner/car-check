@@ -1,0 +1,19 @@
+.header {
+  position: absolute;
+  width: 100%;
+}
+
+.header__button-wrap {
+  display: flex;
+  padding-top: 40px;
+  justify-content: space-between;
+}
+
+.header__button {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(318.21deg, #2c3036 14.05%, #31343c 85.29%);
+  filter: blur(2px);
+  border-radius: 30px;
+  z-index: 1;
+}

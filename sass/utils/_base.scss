@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Gilroy'), url('../../fonts/Gilroy-UltraLight.woff') format('woff');
+}
+
+.section {
+  background: linear-gradient(180deg, #353a40 0%, #16171b 100%);
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  @media screen and (min-width: 480px) {
+    width: 420px;
+  }
+}
