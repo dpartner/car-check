@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <title>Car check</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__button-wrap header__button-wrap--car-info container">
+        <button type="button" class="header__button">
+          <div class="header__button-second">
+            <div class="header__button-third">
+              <div class="header__button-fourth">
+                <svg width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-menu_button"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </button>
+        <button type="button" class="header__button">
+          <div class="header__button-second">
+            <div class="header__button-third">
+              <div class="header__button-fourth">
+                <svg width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-profile_button"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="car-info section">
+        <div class="car-info__container container">
+          <p class="car-info__description">Check your</p>
+          <h2 class="car-info__heading">VolksWagen CC</h2>
+          <div class="car-info__image-wrap">
+            <picture>
+              <source srcset="./images/cc2.png 1x, ./images/cc2@2x.png 2x" type="image/png" />
+              <img class="car-info__image" src="./images/cc1.png" alt="Изображение вашей машины" />
+            </picture>
+          </div>
+          <h2 class="car-info__status-heading">Информация</h2>
+          <ul class="car-info__status-wrap">
+            <li class="car-info__status-item">
+              <div class="car-info__status-label-wrap">
+                <svg class="car-info__status-label-icon" width="7" height="13">
+                  <use href="images/symbol-defs.svg#icon-battery"></use>
+                </svg>
+                <span class="car-info__status-label-heading">Расходы</span>
+              </div>
+              <div class="car-info__status-value">2437 грн.</div>
+            </li>
+            <li class="car-info__status-item">
+              <div class="car-info__status-label-wrap">
+                <svg class="car-info__status-label-icon" width="15" height="15">
+                  <use href="images/symbol-defs.svg#icon-navigation"></use>
+                </svg>
+                <span class="car-info__status-label-heading">Пробег</span>
+              </div>
+              <div class="car-info__status-value">179300 km</div>
+            </li>
+            <li class="car-info__status-item">
+              <div class="car-info__status-label-wrap">
+                <svg class="car-info__status-label-icon" width="7" height="14">
+                  <use href="images/symbol-defs.svg#icon-union"></use>
+                </svg>
+                <span class="car-info__status-label-heading">ТО через</span>
+              </div>
+              <div class="car-info__status-value">250 km</div>
+            </li>
+          </ul>
+          <h2 class="car-info__status-heading">Уведомления</h2>
+          <div class="car-info__scrolling-wrapper">
+            <button class="car-info__scrolling-card">
+              <div class="car-info__card-first-bg">
+                <div class="car-info__light"></div>
+              </div>
+            </button>
+            <button class="car-info__scrolling-card">
+              <div class="car-info__card-second-bg"></div>
+            </button>
+            <button class="car-info__scrolling-card">
+              <div class="car-info__card-third-bg"></div>
+            </button>
+            <button class="car-info__scrolling-card">
+              <div class="car-info__card-first-bg"></div>
+            </button>
+            <button class="car-info__scrolling-card">
+              <div class="car-info__card-second-bg"></div>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

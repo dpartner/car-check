@@ -16,7 +16,7 @@
   <body>
     <header class="header">
       <div class="header__button-wrap container">
-        <button type="button" class="header__button">
+        <!-- <button type="button" class="header__button">
           <div class="header__button-second">
             <div class="header__button-third">
               <div class="header__button-fourth">
@@ -26,7 +26,7 @@
               </div>
             </div>
           </div>
-        </button>
+        </button> -->
         <button type="button" class="header__button">
           <div class="header__button-second">
             <div class="header__button-third">
@@ -41,72 +41,34 @@
       </div>
     </header>
     <main>
-      <section class="start section display-none">
+      <section class="start section">
         <div class="start__container container">
-          <p class="start__description">Check your</p>
-          <h1 class="start__header">VolksWagen CC</h1>
-          <div class="start__check-wrap">
-            <p class="start__number">297</p>
-            <p class="start__km">km</p>
-          </div>
-          <div class="start__image-wrap">
-            <picture>
-              <source srcset="./images/cc1.png 1x, ./images/cc1@2x.png 2x" type="image/png" />
-              <img class="start__image" src="./images/cc1.png" alt="Изображение вашей машины" />
-            </picture>
-          </div>
-          <button type="button" class="open-button start__open-button">
-            <div class="open-button__first-circle">
-              <div class="open-button__second-circle">
-                <svg width="70" height="70">
-                  <use href="images/symbol-defs.svg#icon-start_button"></use>
-                </svg>
-              </div>
+          <div class="start__info-wrap">
+            <p class="start__description">Check your</p>
+            <h1 class="start__heading">VolksWagen CC</h1>
+            <div class="start__check-wrap">
+              <p class="start__number">297</p>
+              <p class="start__km">km</p>
             </div>
-          </button>
-          <p class="start__open-description">Tap to open the app</p>
-        </div>
-      </section>
-      <section class="car-info section">
-        <div class="car-info__container container">
-          <p class="car-info__description">Check your</p>
-          <h2 class="car-info__header">VolksWagen CC</h2>
-          <div class="car-info__image-wrap">
-            <picture>
-              <source srcset="./images/cc2.png 1x, ./images/cc2@2x.png 2x" type="image/png" />
-              <img class="car-info__image" src="./images/cc1.png" alt="Изображение вашей машины" />
-            </picture>
+            <div class="start__image-wrap">
+              <picture>
+                <source srcset="./images/cc1.png 1x, ./images/cc1@2x.png 2x" type="image/png" />
+                <img class="start__image" src="./images/cc1.png" alt="Изображение вашей машины" />
+              </picture>
+            </div>
           </div>
-          <h2 class="car-info__status">Status</h2>
-          <ul class="car-info__status-wrap">
-            <li class="car-info__status-item">
-              <div class="car-info__status-label-wrap">
-                <svg class="car-info__status-label-icon" width="7" height="13">
-                  <use href="images/symbol-defs.svg#icon-battery"></use>
-                </svg>
-                <span class="car-info__status-label-heading">Расходы</span>
+          <div class="start__button-wrap">
+            <a href="./car-info.html" class="open-button start__open-button">
+              <div class="open-button__first-circle">
+                <div class="open-button__second-circle">
+                  <svg width="70" height="70">
+                    <use href="images/symbol-defs.svg#icon-start_button"></use>
+                  </svg>
+                </div>
               </div>
-              <div class="car-info__status-value">2437 грн.</div>
-            </li>
-            <li class="car-info__status-item">
-              <div class="car-info__status-label-wrap">
-                <svg class="car-info__status-label-icon" width="15" height="15">
-                  <use href="images/symbol-defs.svg#icon-navigation"></use>
-                </svg>
-                <span class="car-info__status-label-heading">Пробег</span>
-              </div>
-              <div class="car-info__status-value">179300 km</div>
-            </li>
-            <li class="car-info__status-item">
-              <div class="car-info__status-label-wrap">
-                <svg class="car-info__status-label-icon" width="7" height="14">
-                  <use href="images/symbol-defs.svg#icon-union"></use>
-                </svg>
-                <span class="car-info__status-label-heading">ТО через</span>
-              </div>
-              <div class="car-info__status-value">250 km</div>
-            </li>
-          </ul>
+            </a>
+            <p class="start__open-description">Tap to open the app</p>
+          </div>
         </div>
       </section>
     </main>

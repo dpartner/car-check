@@ -1,11 +1,26 @@
 .start {
-  padding-top: 120px;
-  padding-bottom: 30px;
+  padding-top: 80px;
+  padding-bottom: 50px;
+  height: 100vh;
   // overflow: hidden;
   text-align: center;
   position: relative;
   opacity: 1;
 }
+
+.start__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+// .start__info-wrap {
+//   margin-bottom: auto;
+// }
+
+// .start__button-wrap {
+//   margin-top: auto;
+// }
 
 .start__description {
   font-weight: 400;
@@ -15,7 +30,7 @@
   color: var(--description-text-color);
 }
 
-.start__header {
+.start__heading {
   margin-bottom: 40px;
   font-weight: 900;
   font-size: 50px;
@@ -55,7 +70,7 @@
 
 .start__image-wrap {
   position: relative;
-  height: 130px;
+  height: 30px;
   // top: 230px;
   // left: 10%;
   // z-index: 1;
