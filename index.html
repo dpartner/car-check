@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,28 +19,55 @@
   <body>
     <header class="header">
       <div class="header__button-wrap container">
-        <button type="button" class="header__button"></button>
-        <button type="button" class="header__button"></button>
+        <button type="button" class="header__button">
+          <div class="header__button-second">
+            <div class="header__button-third">
+              <div class="header__button-fourth">
+                <svg width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-menu_button"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </button>
+        <button type="button" class="header__button">
+          <div class="header__button-second">
+            <div class="header__button-third">
+              <div class="header__button-fourth">
+                <svg width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-profile_button"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </button>
       </div>
     </header>
     <main>
       <section class="start section">
-        <div class="container">
+        <div class="start__container container">
           <p class="start__description">Check your</p>
           <h1 class="start__header">VolksWagen CC</h1>
           <div class="start__check-wrap">
             <p class="start__number">297</p>
             <p class="start__km">km</p>
           </div>
-          <div>
-            <div class="start__image-wrap">
-              <img
-                class="start__image"
-                src="./images/cybertruck.png"
-                alt="Изображение вашей машины"
-              />
-            </div>
+          <div class="start__image-wrap">
+            <picture>
+              <source srcset="./images/cc1.png 1x, ./images/cc1@2x.png 2x" type="image/png" />
+              <img class="start__image" src="./images/cc1.png" alt="Изображение вашей машины" />
+            </picture>
           </div>
+          <button type="button" class="open-button start__open-button">
+            <div class="open-button__first-circle">
+              <div class="open-button__second-circle">
+                <svg width="70" height="70">
+                  <use href="images/symbol-defs.svg#icon-start_button"></use>
+                </svg>
+              </div>
+            </div>
+          </button>
+          <p class="start__open-description">Tap to open the app</p>
         </div>
       </section>
     </main>

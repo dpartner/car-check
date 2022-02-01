@@ -1,6 +1,8 @@
 :root {
   --description-text-color: #7f8489;
   --primary-text-color: #fdfdfd;
+  // --secondary-text-color: #e6e6e6;
+  --accent-color: #11a8fd;
 }
 
 body {
@@ -8,4 +10,5 @@ body {
   color: #757575;
   font-size: 14px;
   line-height: 1.7;
+  background: #353a40;
 }
