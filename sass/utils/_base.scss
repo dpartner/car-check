@@ -2,7 +2,8 @@
   font-family: 'Gilroy';
   font-style: normal;
   font-weight: 300;
-  src: local('Gilroy'), url('../../fonts/Gilroy-UltraLight.woff') format('woff');
+  src: local('Gilroy'), url('../../fonts/Gilroy-UltraLight.woff') format('woff'),
+    url('../../fonts/Gilroy-UltraLight.ttf') format('truetype');
 }
 
 .section {
