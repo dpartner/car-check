@@ -39,7 +39,8 @@ Sections
 body {
   margin: 0;
   /* 1 */
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji';
   /* 2 */
 }
 
@@ -315,7 +316,8 @@ button {
   font-family: 'Gilroy';
   font-style: normal;
   font-weight: 300;
-  src: local("Gilroy"), url("../../fonts/Gilroy-UltraLight.woff") format("woff"), url("../../fonts/Gilroy-UltraLight.ttf") format("truetype");
+  src: url('../../fonts/Gilroy-UltraLight.woff') format('woff'),
+    url('../../fonts/Gilroy-UltraLight.ttf') format('truetype');
 }
 
 .section {
@@ -527,7 +529,8 @@ button {
   animation: pulse 1500ms infinite;
 }
 
-.open-button:hover, .open-button:focus {
+.open-button:hover,
+.open-button:focus {
   animation: none;
 }
 
@@ -581,7 +584,8 @@ button {
   align-items: center;
 }
 
-.open-button__second-circle:hover, .open-button__second-circle:focus {
+.open-button__second-circle:hover,
+.open-button__second-circle:focus {
   border: 0;
 }
 
