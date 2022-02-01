@@ -1,0 +1,140 @@
+.car-info {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  opacity: 1;
+}
+
+.car-info__description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--description-text-color);
+}
+
+.car-info__header {
+  margin-bottom: 40px;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+  text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.25);
+}
+
+.car-info__image-wrap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+@keyframes carLight {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+    scale: 1.5;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+    scale: 1.5;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    scale: 1.5;
+  }
+}
+
+.car-info__image {
+  width: 300px;
+}
+
+.car-info__image-wrap::before {
+  content: '';
+  width: 70px;
+  height: 20px;
+  background: #ff4141;
+  box-shadow: 0px 0px 20px rgba(181, 41, 51, 0.7), 0px 0px 70px #ff4141;
+  filter: blur(12px);
+  border-radius: 50%;
+  position: absolute;
+  top: 65px;
+  left: 17vw;
+  z-index: 5;
+  animation: carLight 750ms cubic-bezier(0.4, 0, 0.2, 1) 3s;
+  transform: rotate(5deg);
+}
+
+.car-info__image-wrap::after {
+  content: '';
+  width: 70px;
+  height: 20px;
+  background: #ff4141;
+  box-shadow: 0px 0px 20px rgba(181, 41, 51, 0.7), 0px 0px 70px #ff4141;
+  filter: blur(12px);
+  border-radius: 50%;
+  position: absolute;
+  top: 65px;
+  right: 17vw;
+  z-index: 5;
+  animation: carLight 750ms cubic-bezier(0.4, 0, 0.2, 1) 3s;
+  transform: rotate(-5deg);
+}
+
+.car-info__status {
+  margin-bottom: 25px;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.2;
+  text-align: left;
+  color: var(--primary-text-color);
+}
+
+.car-info__status-wrap {
+  // text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.car-info__status-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.car-info__status-label-wrap {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.car-info__status-label-icon {
+  margin-right: 7px;
+}
+
+.car-info__status-label-heading {
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--description-text-color);
+}
+
+.car-info__status-value {
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--primary-text-color);
+  text-align: center;
+}

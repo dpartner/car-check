@@ -41,7 +41,7 @@
       </div>
     </header>
     <main>
-      <section class="start section">
+      <section class="start section display-none">
         <div class="start__container container">
           <p class="start__description">Check your</p>
           <h1 class="start__header">VolksWagen CC</h1>
@@ -65,6 +65,48 @@
             </div>
           </button>
           <p class="start__open-description">Tap to open the app</p>
+        </div>
+      </section>
+      <section class="car-info section">
+        <div class="car-info__container container">
+          <p class="car-info__description">Check your</p>
+          <h2 class="car-info__header">VolksWagen CC</h2>
+          <div class="car-info__image-wrap">
+            <picture>
+              <source srcset="./images/cc2.png 1x, ./images/cc2@2x.png 2x" type="image/png" />
+              <img class="car-info__image" src="./images/cc1.png" alt="Изображение вашей машины" />
+            </picture>
+          </div>
+          <h2 class="car-info__status">Status</h2>
+          <ul class="car-info__status-wrap">
+            <li class="car-info__status-item">
+              <div class="car-info__status-label-wrap">
+                <svg class="car-info__status-label-icon" width="7" height="13">
+                  <use href="images/symbol-defs.svg#icon-battery"></use>
+                </svg>
+                <span class="car-info__status-label-heading">Расходы</span>
+              </div>
+              <div class="car-info__status-value">2437 грн.</div>
+            </li>
+            <li class="car-info__status-item">
+              <div class="car-info__status-label-wrap">
+                <svg class="car-info__status-label-icon" width="15" height="15">
+                  <use href="images/symbol-defs.svg#icon-navigation"></use>
+                </svg>
+                <span class="car-info__status-label-heading">Пробег</span>
+              </div>
+              <div class="car-info__status-value">179300 km</div>
+            </li>
+            <li class="car-info__status-item">
+              <div class="car-info__status-label-wrap">
+                <svg class="car-info__status-label-icon" width="7" height="14">
+                  <use href="images/symbol-defs.svg#icon-union"></use>
+                </svg>
+                <span class="car-info__status-label-heading">ТО через</span>
+              </div>
+              <div class="car-info__status-value">250 km</div>
+            </li>
+          </ul>
         </div>
       </section>
     </main>
