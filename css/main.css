@@ -406,7 +406,6 @@ button {
 .start {
   padding-top: 120px;
   width: 100%;
-  overflow: hidden;
   text-align: center;
   position: relative;
   opacity: 1;
