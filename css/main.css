@@ -611,11 +611,16 @@ button {
 
 .car-info {
   padding-top: 20px;
-  padding-bottom: 30px;
   width: 100%;
+  height: 100vh;
   text-align: center;
   position: relative;
-  opacity: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.car-info__wrap {
+  margin-bottom: 20px;
 }
 
 .car-info__description {
@@ -642,7 +647,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 @keyframes carLight {
@@ -670,20 +675,20 @@ button {
 }
 
 .car-info__image {
-  width: 300px;
+  width: 200px;
 }
 
 .car-info__image-wrap::before {
   content: '';
-  width: 70px;
-  height: 20px;
+  width: 50px;
+  height: 15px;
   background: #ff4141;
   box-shadow: 0px 0px 20px rgba(181, 41, 51, 0.7), 0px 0px 70px #ff4141;
-  filter: blur(12px);
+  filter: blur(8px);
   border-radius: 50%;
   position: absolute;
-  top: 65px;
-  left: 17vw;
+  top: 45px;
+  left: 26vw;
   z-index: 5;
   animation: carLight 750ms cubic-bezier(0.4, 0, 0.2, 1) 3s;
   transform: rotate(5deg);
@@ -691,15 +696,15 @@ button {
 
 .car-info__image-wrap::after {
   content: '';
-  width: 70px;
-  height: 20px;
+  width: 50px;
+  height: 15px;
   background: #ff4141;
   box-shadow: 0px 0px 20px rgba(181, 41, 51, 0.7), 0px 0px 70px #ff4141;
-  filter: blur(12px);
+  filter: blur(8px);
   border-radius: 50%;
   position: absolute;
-  top: 65px;
-  right: 17vw;
+  top: 45px;
+  right: 26vw;
   z-index: 5;
   animation: carLight 750ms cubic-bezier(0.4, 0, 0.2, 1) 3s;
   transform: rotate(-5deg);
@@ -715,7 +720,7 @@ button {
 }
 
 .car-info__status-wrap {
-  margin-bottom: 55px;
+  margin-bottom: 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -775,21 +780,21 @@ button {
   padding: 18px;
   width: 100%;
   height: 100%;
-  background-image: url(/images/card-bg-1.png);
+  background-image: url(../images/card-bg-1.png);
 }
 
 .car-info__card-second-bg {
   padding: 18px;
   width: 100%;
   height: 100%;
-  background-image: url(/images/card-bg-2.png);
+  background-image: url(../images/card-bg-2.png);
 }
 
 .car-info__card-third-bg {
   padding: 18px;
   width: 100%;
   height: 100%;
-  background-image: url(/images/card-bg-3.png);
+  background-image: url(../images/card-bg-3.png);
 }
 
 .car-info__light {
@@ -798,5 +803,100 @@ button {
   background: linear-gradient(320.66deg, #0172be 14.75%, #0f9bee 84.81%);
   box-shadow: 0px 0px 8px #0a8ddd;
   border-radius: 100px;
+}
+
+.add-menu {
+  margin-top: auto;
+  position: relative;
+}
+
+.add-menu__wrap {
+  background: linear-gradient(180deg, #353a40 -56.47%, #16171b 100%);
+  border-radius: 50px 50px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 30px 40px 10px 40px;
+}
+
+.add-menu__wrap::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background: #17181c;
+  border-radius: 20px;
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.add-menu__wrap--open {
+  position: absolute;
+  width: 100%;
+  height: 70vh;
+  bottom: 0;
+}
+
+.add-menu__heading-wrap {
+  text-align: left;
+}
+
+.add-menu__heading {
+  margin-bottom: 8px;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.2;
+  color: var(--primary-text-color);
+}
+
+.add-menu__open-button {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(318.21deg, #11a8fd 14.05%, #0081c9 85.29%);
+  box-shadow: 10px 15px 40px #000000, -10px -15px 40px #2f393d;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-menu__button-second-circle {
+  width: 81px;
+  height: 81px;
+  background: linear-gradient(320.66deg, #11a8fd 14.75%, #0081c9 84.81%);
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-menu__button-third-circle {
+  width: 75px;
+  height: 75px;
+  background: linear-gradient(320.66deg, #005ea3 14.75%, #11a8fd 84.81%);
+  border: 1px solid #058dd9;
+  box-sizing: border-box;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-menu__button-fourth-circle {
+  width: 75px;
+  height: 75px;
+  padding-top: 8px;
+  background: linear-gradient(320.66deg, #016bb8 14.75%, #11a8fd 84.81%);
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-text-color);
+}
+
+.add-menu__open-button-icon {
+  fill: currentColor;
 }
 /*# sourceMappingURL=main.css.map */
