@@ -186,7 +186,7 @@
 .open-button__second-circle {
   width: 120px;
   height: 120px;
-  padding-top: 10px;
+  color: var(--primary-text-color);
   background: linear-gradient(320.66deg, #005ea3 14.75%, #11a8fd 84.81%);
   border: 3px solid #058dd9;
   box-sizing: border-box;
@@ -198,6 +198,10 @@
   &:focus {
     border: 0;
   }
+}
+
+.open-button__icon {
+  fill: currentColor;
 }
 
 .start__open-description {

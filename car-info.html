@@ -106,14 +106,14 @@
           <div class="add-menu__wrap" add-menu>
             <div class="add-menu__wrap-toogle" is-hiden>
               <div class="add-menu__heading-wrap">
-                <h2 class="add-menu__heading">Add data</h2>
-                <p class="add-menu__description">Open to add new data</p>
+                <h2 class="add-menu__heading">Добавить данные</h2>
+                <p class="add-menu__description">Открой, чтобы записать</p>
               </div>
-              <button type="button" class="add-menu__open-button" add-menu-open>
+              <button type="button" class="add-menu__button" add-menu-open>
                 <div class="add-menu__button-second-circle">
                   <div class="add-menu__button-third-circle">
                     <div class="add-menu__button-fourth-circle">
-                      <svg class="add-menu__open-button-icon" width="30" height="30">
+                      <svg class="add-menu__button-icon" width="20" height="20">
                         <use href="./images/symbol-defs.svg#icon-add_button"></use>
                       </svg>
                     </div>
@@ -122,11 +122,19 @@
               </button>
             </div>
             <div class="add-menu__content-wrap visually-hidden" not-hiden>
-              <button type="button" class="add-menu__open-button" add-menu-close>
+              <div class="add-menu__heading-wrap">
+                <h2 class="add-menu__heading">Заполни поля</h2>
+                <p class="add-menu__description">После ввода - закрой меню</p>
+              </div>
+              <button type="button" class="add-menu__button" add-menu-close>
                 <div class="add-menu__button-second-circle">
                   <div class="add-menu__button-third-circle">
                     <div class="add-menu__button-fourth-circle">
-                      <svg class="add-menu__open-button-icon" width="30" height="30">
+                      <svg
+                        class="add-menu__button-icon add-menu__button-icon--close"
+                        width="20"
+                        height="20"
+                      >
                         <use href="./images/symbol-defs.svg#icon-add_button"></use>
                       </svg>
                     </div>
