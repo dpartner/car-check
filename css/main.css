@@ -811,13 +811,13 @@ button {
 }
 
 .add-menu__wrap {
+  position: absolute;
+  bottom: 0;
   background: linear-gradient(180deg, #353a40 -56.47%, #16171b 100%);
   border-radius: 50px 50px 0 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: relative;
   padding: 30px 40px 10px 40px;
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .add-menu__wrap::after {
@@ -833,10 +833,13 @@ button {
 }
 
 .add-menu__wrap--open {
-  position: absolute;
-  width: 100%;
-  height: 70vh;
-  bottom: 0;
+  transform: translateY(-300px);
+}
+
+.add-menu__wrap-toogle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .add-menu__heading-wrap {
@@ -852,8 +855,8 @@ button {
 }
 
 .add-menu__open-button {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   background: linear-gradient(318.21deg, #11a8fd 14.05%, #0081c9 85.29%);
   box-shadow: 10px 15px 40px #000000, -10px -15px 40px #2f393d;
   border-radius: 100px;
@@ -863,8 +866,8 @@ button {
 }
 
 .add-menu__button-second-circle {
-  width: 81px;
-  height: 81px;
+  width: 61px;
+  height: 61px;
   background: linear-gradient(320.66deg, #11a8fd 14.75%, #0081c9 84.81%);
   border-radius: 100px;
   display: flex;
@@ -873,8 +876,8 @@ button {
 }
 
 .add-menu__button-third-circle {
-  width: 75px;
-  height: 75px;
+  width: 55px;
+  height: 55px;
   background: linear-gradient(320.66deg, #005ea3 14.75%, #11a8fd 84.81%);
   border: 1px solid #058dd9;
   box-sizing: border-box;
@@ -885,8 +888,8 @@ button {
 }
 
 .add-menu__button-fourth-circle {
-  width: 75px;
-  height: 75px;
+  width: 55px;
+  height: 55px;
   padding-top: 8px;
   background: linear-gradient(320.66deg, #016bb8 14.75%, #11a8fd 84.81%);
   border-radius: 100px;
@@ -898,5 +901,9 @@ button {
 
 .add-menu__open-button-icon {
   fill: currentColor;
+}
+
+.add-menu__content-wrap {
+  height: 60vh;
 }
 /*# sourceMappingURL=main.css.map */

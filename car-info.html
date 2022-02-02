@@ -103,25 +103,41 @@
           </div>
         </div>
         <div class="add-menu">
-          <div class="add-menu__wrap">
-            <div class="add-menu__heading-wrap">
-              <h2 class="add-menu__heading">Add data</h2>
-              <p class="add-menu__description">Open to add new data</p>
-            </div>
-            <button type="button" class="add-menu__open-button">
-              <div class="add-menu__button-second-circle">
-                <div class="add-menu__button-third-circle">
-                  <div class="add-menu__button-fourth-circle">
-                    <svg class="add-menu__open-button-icon" width="50" height="50">
-                      <use href="./images/symbol-defs.svg#icon-add_button"></use>
-                    </svg>
+          <div class="add-menu__wrap" add-menu>
+            <div class="add-menu__wrap-toogle" is-hiden>
+              <div class="add-menu__heading-wrap">
+                <h2 class="add-menu__heading">Add data</h2>
+                <p class="add-menu__description">Open to add new data</p>
+              </div>
+              <button type="button" class="add-menu__open-button" add-menu-open>
+                <div class="add-menu__button-second-circle">
+                  <div class="add-menu__button-third-circle">
+                    <div class="add-menu__button-fourth-circle">
+                      <svg class="add-menu__open-button-icon" width="30" height="30">
+                        <use href="./images/symbol-defs.svg#icon-add_button"></use>
+                      </svg>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </button>
+              </button>
+            </div>
+            <div class="add-menu__content-wrap visually-hidden" not-hiden>
+              <button type="button" class="add-menu__open-button" add-menu-close>
+                <div class="add-menu__button-second-circle">
+                  <div class="add-menu__button-third-circle">
+                    <div class="add-menu__button-fourth-circle">
+                      <svg class="add-menu__open-button-icon" width="30" height="30">
+                        <use href="./images/symbol-defs.svg#icon-add_button"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </section>
     </main>
+    <script src="/js/add-menu.js"></script>
   </body>
 </html>
