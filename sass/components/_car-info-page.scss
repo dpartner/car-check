@@ -41,27 +41,57 @@
   margin-bottom: 20px;
 }
 
-@keyframes carLight {
+@keyframes carLightInfoLeft {
   0% {
     opacity: 0;
+    transform: translateX(-75px) scale(1);
   }
   20% {
     opacity: 1;
-    scale: 1.5;
+    transform: translateX(-75px) scale(1.5);
   }
   40% {
     opacity: 0;
+    transform: translateX(-75px) scale(1);
   }
   60% {
     opacity: 1;
-    scale: 1.5;
+    transform: translateX(-75px) scale(1.5);
   }
   80% {
     opacity: 0;
+    transform: translateX(-75px) scale(1);
   }
   100% {
     opacity: 1;
-    scale: 1.5;
+    transform: translateX(-75px) scale(1.5);
+  }
+}
+
+@keyframes carLightInfoRight {
+  0% {
+    opacity: 0;
+    transform: translateX(75px) scale(1);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(75px) scale(1.5);
+  }
+  40% {
+    opacity: 0;
+    transform: translateX(75px) scale(1);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(75px) scale(1.5);
+  }
+  80% {
+    opacity: 0;
+    transform: translateX(75px) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(75px) scale(1.5);
   }
 }
 
@@ -81,7 +111,7 @@
   top: 50px;
   left: 50%;
   z-index: 2;
-  animation: carLight 750ms cubic-bezier(0.4, 0, 0.2, 1) 3s;
+  animation: carLightInfoLeft 750ms cubic-bezier(0.4, 0, 0.2, 1) 3s;
   transform: rotate(5deg) translateX(-75px);
 }
 
@@ -97,8 +127,8 @@
   top: 50px;
   right: 50%;
   z-index: 2;
-  animation: carLight 750ms cubic-bezier(0.4, 0, 0.2, 1) 3s;
-  transform: rotate(-5deg) translateX(75px);
+  animation: carLightInfoRight 750ms cubic-bezier(0.4, 0, 0.2, 1) 3s;
+  transform: rotate(-5deg) translateX(75px) scale(1);
 }
 
 .car-info__status-heading {

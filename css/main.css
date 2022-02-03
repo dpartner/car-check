@@ -530,51 +530,30 @@ button {
   height: 30px;
 }
 
-@-webkit-keyframes carLight {
-  0% {
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-    scale: 1.5;
-  }
-  40% {
-    opacity: 0;
-  }
-  60% {
-    opacity: 1;
-    scale: 1.5;
-  }
-  80% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    scale: 1.5;
-  }
-}
-
 @keyframes carLight {
   0% {
     opacity: 0;
+    transform: rotate(-15deg) translateX(-170px) scale(1);
   }
   20% {
     opacity: 1;
-    scale: 1.5;
+    transform: rotate(-15deg) translateX(-170px) scale(1.5);
   }
   40% {
     opacity: 0;
+    transform: rotate(-15deg) translateX(-170px) scale(1);
   }
   60% {
     opacity: 1;
-    scale: 1.5;
+    transform: rotate(-15deg) translateX(-170px) scale(1.5);
   }
   80% {
     opacity: 0;
+    transform: rotate(-15deg) translateX(-170px) scale(1);
   }
   100% {
     opacity: 1;
-    scale: 1.5;
+    transform: rotate(-15deg) translateX(-170px) scale(1.5);
   }
 }
 
@@ -598,11 +577,8 @@ button {
   top: -75px;
   left: 50%;
   z-index: 5;
-  -webkit-animation: carLight 750ms cubic-bezier(0.4, 0, 0.2, 1) 3s;
   animation: carLight 750ms cubic-bezier(0.4, 0, 0.2, 1) 3s;
-  -webkit-transform: rotate(-15deg) translateX(-170px);
-  -ms-transform: rotate(-15deg) translateX(-170px);
-  transform: rotate(-15deg) translateX(-170px);
+  transform: rotate(-15deg) translateX(-170px) scale(1);
 }
 
 .open-button {
@@ -734,27 +710,57 @@ button {
   margin-bottom: 20px;
 }
 
-@keyframes carLight {
+@keyframes carLightInfoLeft {
   0% {
     opacity: 0;
+    transform: translateX(-75px) scale(1);
   }
   20% {
     opacity: 1;
-    scale: 1.5;
+    transform: translateX(-75px) scale(1.5);
   }
   40% {
     opacity: 0;
+    transform: translateX(-75px) scale(1);
   }
   60% {
     opacity: 1;
-    scale: 1.5;
+    transform: translateX(-75px) scale(1.5);
   }
   80% {
     opacity: 0;
+    transform: translateX(-75px) scale(1);
   }
   100% {
     opacity: 1;
-    scale: 1.5;
+    transform: translateX(-75px) scale(1.5);
+  }
+}
+
+@keyframes carLightInfoRight {
+  0% {
+    opacity: 0;
+    transform: translateX(75px) scale(1);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(75px) scale(1.5);
+  }
+  40% {
+    opacity: 0;
+    transform: translateX(75px) scale(1);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(75px) scale(1.5);
+  }
+  80% {
+    opacity: 0;
+    transform: translateX(75px) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(75px) scale(1.5);
   }
 }
 
@@ -774,7 +780,7 @@ button {
   top: 50px;
   left: 50%;
   z-index: 2;
-  animation: carLight 750ms cubic-bezier(0.4, 0, 0.2, 1) 3s;
+  animation: carLightInfoLeft 750ms cubic-bezier(0.4, 0, 0.2, 1) 3s;
   transform: rotate(5deg) translateX(-75px);
 }
 
@@ -790,8 +796,8 @@ button {
   top: 50px;
   right: 50%;
   z-index: 2;
-  animation: carLight 750ms cubic-bezier(0.4, 0, 0.2, 1) 3s;
-  transform: rotate(-5deg) translateX(75px);
+  animation: carLightInfoRight 750ms cubic-bezier(0.4, 0, 0.2, 1) 3s;
+  transform: rotate(-5deg) translateX(75px) scale(1);
 }
 
 .car-info__status-heading {
