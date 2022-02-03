@@ -15,18 +15,7 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__button-wrap header__button-wrap--car-info container">
-        <button type="button" class="header__button">
-          <div class="header__button-second">
-            <div class="header__button-third">
-              <div class="header__button-fourth">
-                <svg width="20" height="20">
-                  <use href="./images/symbol-defs.svg#icon-menu_button"></use>
-                </svg>
-              </div>
-            </div>
-          </div>
-        </button>
+      <div class="header__container header__container--two-button container">
         <button type="button" class="header__button">
           <div class="header__button-second">
             <div class="header__button-third">
@@ -38,6 +27,45 @@
             </div>
           </div>
         </button>
+        <button type="button" class="header__button" menu-open>
+          <div class="header__button-second">
+            <div class="header__button-third">
+              <div class="header__button-fourth">
+                <svg width="20" height="20">
+                  <use href="./images/symbol-defs.svg#icon-menu_button"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="header__menu" menu>
+        <div class="header__menu-wrap container">
+          <nav class="header__nav-wrap">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="">Архив</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="">Статистика</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="./index.html">Выход</a>
+              </li>
+            </ul>
+          </nav>
+          <button type="button" class="header__button header__menu-close-button" menu-close>
+            <div class="header__button-second">
+              <div class="header__button-third">
+                <div class="header__button-fourth">
+                  <svg class="header__button-icon--close" width="20" height="20">
+                    <use href="./images/symbol-defs.svg#icon-add_button"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </button>
+        </div>
       </div>
     </header>
     <main>
@@ -147,5 +175,6 @@
       </section>
     </main>
     <script src="./js/add-menu.js" type="module"></script>
+    <script src="./js/menu.js" type="module"></script>
   </body>
 </html>

@@ -287,6 +287,7 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  text-decoration: none;
 }
 
 a {
@@ -356,14 +357,20 @@ button {
 }
 
 .header {
-  position: absolute;
+  position: fixed;
   width: 100%;
+  top: 0;
+  z-index: 2;
 }
 
-.header__button-wrap {
+.header__container {
   display: flex;
   padding-top: 10px;
   justify-content: flex-end;
+}
+
+.header__container--two-button {
+  justify-content: space-between;
 }
 
 .header__button {
@@ -406,6 +413,54 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.header__menu {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+  background: #353a40;
+  border-radius: 0 0 30px 30px;
+  opacity: 0.95;
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(-100%);
+}
+
+.header__menu--is-open {
+  transform: translateY(0%);
+}
+
+.header__menu-wrap {
+  position: relative;
+  padding: 100px 30px 20px 30px;
+}
+
+.header__menu-close-button {
+  position: absolute;
+  top: 10px;
+  right: 17px;
+}
+
+.header__nav-wrap {
+  text-align: right;
+}
+
+.header__nav-item:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.header__nav-link {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.2;
+  text-align: left;
+  color: var(--primary-text-color);
+}
+
+.header__button-icon--close {
+  transform: rotate(45deg);
+  fill: var(--primary-text-color);
 }
 
 .start {
@@ -475,6 +530,30 @@ button {
   height: 30px;
 }
 
+@-webkit-keyframes carLight {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+    scale: 1.5;
+  }
+  40% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+    scale: 1.5;
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    scale: 1.5;
+  }
+}
+
 @keyframes carLight {
   0% {
     opacity: 0;
@@ -502,7 +581,8 @@ button {
 .start__image {
   position: absolute;
   top: -200px;
-  left: 10px;
+  left: 50%;
+  transform: translateX(-27%);
   z-index: 1;
 }
 
@@ -515,11 +595,14 @@ button {
   filter: blur(10px);
   border-radius: 50%;
   position: absolute;
-  top: -35px;
-  left: 70px;
+  top: -75px;
+  left: 50%;
   z-index: 5;
+  -webkit-animation: carLight 750ms cubic-bezier(0.4, 0, 0.2, 1) 3s;
   animation: carLight 750ms cubic-bezier(0.4, 0, 0.2, 1) 3s;
-  transform: rotate(-15deg);
+  -webkit-transform: rotate(-15deg) translateX(-170px);
+  -ms-transform: rotate(-15deg) translateX(-170px);
+  transform: rotate(-15deg) translateX(-170px);
 }
 
 .open-button {
@@ -609,10 +692,6 @@ button {
   color: #e6e6e6;
 }
 
-.header__button-wrap--car-info {
-  justify-content: space-between;
-}
-
 .car-info {
   padding-top: 20px;
   width: 100%;
@@ -648,6 +727,7 @@ button {
 
 .car-info__image-wrap {
   position: relative;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -691,11 +771,11 @@ button {
   filter: blur(8px);
   border-radius: 50%;
   position: absolute;
-  top: 45px;
-  left: 26vw;
-  z-index: 5;
+  top: 50px;
+  left: 50%;
+  z-index: 2;
   animation: carLight 750ms cubic-bezier(0.4, 0, 0.2, 1) 3s;
-  transform: rotate(5deg);
+  transform: rotate(5deg) translateX(-75px);
 }
 
 .car-info__image-wrap::after {
@@ -707,11 +787,11 @@ button {
   filter: blur(8px);
   border-radius: 50%;
   position: absolute;
-  top: 45px;
-  right: 26vw;
-  z-index: 5;
+  top: 50px;
+  right: 50%;
+  z-index: 2;
   animation: carLight 750ms cubic-bezier(0.4, 0, 0.2, 1) 3s;
-  transform: rotate(-5deg);
+  transform: rotate(-5deg) translateX(75px);
 }
 
 .car-info__status-heading {

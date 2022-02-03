@@ -1,7 +1,3 @@
-.header__button-wrap--car-info {
-  justify-content: space-between;
-}
-
 .car-info {
   padding-top: 20px;
   // padding-bottom: 30px;
@@ -38,6 +34,7 @@
 
 .car-info__image-wrap {
   position: relative;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,11 +78,11 @@
   filter: blur(8px);
   border-radius: 50%;
   position: absolute;
-  top: 45px;
-  left: 26vw;
-  z-index: 5;
+  top: 50px;
+  left: 50%;
+  z-index: 2;
   animation: carLight 750ms cubic-bezier(0.4, 0, 0.2, 1) 3s;
-  transform: rotate(5deg);
+  transform: rotate(5deg) translateX(-75px);
 }
 
 .car-info__image-wrap::after {
@@ -97,11 +94,11 @@
   filter: blur(8px);
   border-radius: 50%;
   position: absolute;
-  top: 45px;
-  right: 26vw;
-  z-index: 5;
+  top: 50px;
+  right: 50%;
+  z-index: 2;
   animation: carLight 750ms cubic-bezier(0.4, 0, 0.2, 1) 3s;
-  transform: rotate(-5deg);
+  transform: rotate(-5deg) translateX(75px);
 }
 
 .car-info__status-heading {

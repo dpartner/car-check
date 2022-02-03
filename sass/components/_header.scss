@@ -1,12 +1,18 @@
 .header {
-  position: absolute;
+  position: fixed;
   width: 100%;
+  top: 0;
+  z-index: 2;
 }
 
-.header__button-wrap {
+.header__container {
   display: flex;
   padding-top: 10px;
   justify-content: flex-end;
+}
+
+.header__container--two-button {
+  justify-content: space-between;
 }
 
 .header__button {
@@ -49,4 +55,52 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.header__menu {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+  background: #353a40;
+  border-radius: 0 0 30px 30px;
+  opacity: 0.95;
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(-100%);
+}
+
+.header__menu--is-open {
+  transform: translateY(0%);
+}
+
+.header__menu-wrap {
+  position: relative;
+  padding: 100px 30px 20px 30px;
+}
+
+.header__menu-close-button {
+  position: absolute;
+  top: 10px;
+  right: 17px;
+}
+
+.header__nav-wrap {
+  text-align: right;
+}
+
+.header__nav-item:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.header__nav-link {
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1.2;
+  text-align: left;
+  color: var(--primary-text-color);
+}
+
+.header__button-icon--close {
+  transform: rotate(45deg);
+  fill: var(--primary-text-color);
 }
