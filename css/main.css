@@ -479,6 +479,10 @@ button {
   justify-content: space-between;
 }
 
+.start__button-wrap {
+  z-index: 10;
+}
+
 .start__description {
   font-weight: 400;
   font-size: 24px;
