@@ -867,21 +867,21 @@ button {
 }
 
 .car-info__card-first-bg {
-  padding: 18px;
+  padding: 10px;
   width: 100%;
   height: 100%;
   background-image: url(../images/card-bg-1.png);
 }
 
 .car-info__card-second-bg {
-  padding: 18px;
+  padding: 10px;
   width: 100%;
   height: 100%;
   background-image: url(../images/card-bg-2.png);
 }
 
 .car-info__card-third-bg {
-  padding: 18px;
+  padding: 10px;
   width: 100%;
   height: 100%;
   background-image: url(../images/card-bg-3.png);
@@ -890,9 +890,45 @@ button {
 .car-info__light {
   width: 6px;
   height: 6px;
+  margin-bottom: 10px;
   background: linear-gradient(320.66deg, #0172be 14.75%, #0f9bee 84.81%);
   box-shadow: 0px 0px 8px #0a8ddd;
   border-radius: 100px;
+}
+
+.car-info__info-wrap {
+  text-align: left;
+}
+
+.car-info__card-icon-wrap {
+  margin-bottom: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.car-info__card-icon {
+  fill: var(--primary-text-color);
+}
+
+.car-info__scrolling-card:hover .car-info__card-icon {
+  fill: #0172be;
+}
+
+.car-info__card-heading {
+  margin-bottom: 6px;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--primary-text-color);
+}
+
+.car-info__card-description {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--description-text-color);
 }
 
 .add-menu {
