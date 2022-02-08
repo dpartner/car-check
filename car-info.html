@@ -203,25 +203,40 @@
               </button>
             </div>
             <div class="add-menu__content-wrap visually-hidden" not-hiden>
-              <div class="add-menu__heading-wrap">
-                <h2 class="add-menu__heading">Заполни поля</h2>
-                <p class="add-menu__description">После ввода - закрой меню</p>
-              </div>
-              <button type="button" class="add-menu__button" add-menu-close>
-                <div class="add-menu__button-second-circle">
-                  <div class="add-menu__button-third-circle">
-                    <div class="add-menu__button-fourth-circle">
-                      <svg
-                        class="add-menu__button-icon add-menu__button-icon--close"
-                        width="20"
-                        height="20"
-                      >
-                        <use href="./images/symbol-defs.svg#icon-add_button"></use>
-                      </svg>
+              <div class="add-menu__close-wrap">
+                <div class="add-menu__heading-wrap">
+                  <h2 class="add-menu__heading">Заполни поля</h2>
+                  <p class="add-menu__description">После ввода - закрой меню</p>
+                </div>
+                <button type="button" class="add-menu__button" add-menu-close>
+                  <div class="add-menu__button-second-circle">
+                    <div class="add-menu__button-third-circle">
+                      <div class="add-menu__button-fourth-circle">
+                        <svg
+                          class="add-menu__button-icon add-menu__button-icon--close"
+                          width="20"
+                          height="20"
+                        >
+                          <use href="./images/symbol-defs.svg#icon-add_button"></use>
+                        </svg>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </button>
+                </button>
+              </div>
+              <div class="input-wrap">
+                <!-- <input
+                  type="text"
+                  id="test-1"
+                  name="test-1"
+                  class="circle-range-select"
+                  value="10;360"
+                  data-boundry="10;360"
+                  data-min="0"
+                  data-max="360"
+                  data-unit="$"
+                /> -->
+              </div>
             </div>
           </div>
         </div>
@@ -229,5 +244,6 @@
     </main>
     <script src="./js/add-menu.js" type="module"></script>
     <script src="./js/menu.js" type="module"></script>
+    <script src="./js/range-input.js" type="module"></script>
   </body>
 </html>
