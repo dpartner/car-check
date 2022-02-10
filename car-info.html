@@ -135,7 +135,7 @@
                     </svg>
                   </div>
                   <h3 class="car-info__card-heading">Укажите пробег</h3>
-                  <p class="car-info__card-description">Последний в записи 178300 km</p>
+                  <p class="car-info__card-description">Последний в записи 179300 km</p>
                 </div>
               </div>
             </button>
@@ -183,18 +183,39 @@
             </button>
           </div>
         </div>
-        <div class="add-menu">
-          <div class="add-menu__wrap" add-menu>
-            <div class="add-menu__wrap-toogle" is-hiden>
-              <div class="add-menu__heading-wrap">
-                <h2 class="add-menu__heading">Добавить данные</h2>
-                <p class="add-menu__description">Открой, чтобы записать</p>
+        <div class="add-menu__wrap add-menu__wrap--open" add-menu>
+          <div class="add-menu__wrap-toogle" is-hiden>
+            <div class="add-menu__heading-wrap">
+              <h2 class="add-menu__heading">Добавить данные</h2>
+              <p class="add-menu__description">Открой, чтобы записать</p>
+            </div>
+            <button type="button" class="add-menu__button" add-menu-open>
+              <div class="add-menu__button-second-circle">
+                <div class="add-menu__button-third-circle">
+                  <div class="add-menu__button-fourth-circle">
+                    <svg class="add-menu__button-icon" width="20" height="20">
+                      <use href="./images/symbol-defs.svg#icon-add_button"></use>
+                    </svg>
+                  </div>
+                </div>
               </div>
-              <button type="button" class="add-menu__button" add-menu-open>
+            </button>
+          </div>
+          <div class="add-menu__content-wrap visually-hidden" not-hiden>
+            <div class="add-menu__close-wrap">
+              <div class="add-menu__heading-wrap">
+                <h2 class="add-menu__heading">Заполни поля</h2>
+                <p class="add-menu__description">После ввода - закрой меню</p>
+              </div>
+              <button type="button" class="add-menu__button" add-menu-close>
                 <div class="add-menu__button-second-circle">
                   <div class="add-menu__button-third-circle">
                     <div class="add-menu__button-fourth-circle">
-                      <svg class="add-menu__button-icon" width="20" height="20">
+                      <svg
+                        class="add-menu__button-icon add-menu__button-icon--close"
+                        width="20"
+                        height="20"
+                      >
                         <use href="./images/symbol-defs.svg#icon-add_button"></use>
                       </svg>
                     </div>
@@ -202,41 +223,139 @@
                 </div>
               </button>
             </div>
-            <div class="add-menu__content-wrap visually-hidden" not-hiden>
-              <div class="add-menu__close-wrap">
-                <div class="add-menu__heading-wrap">
-                  <h2 class="add-menu__heading">Заполни поля</h2>
-                  <p class="add-menu__description">После ввода - закрой меню</p>
-                </div>
-                <button type="button" class="add-menu__button" add-menu-close>
-                  <div class="add-menu__button-second-circle">
-                    <div class="add-menu__button-third-circle">
-                      <div class="add-menu__button-fourth-circle">
-                        <svg
-                          class="add-menu__button-icon add-menu__button-icon--close"
-                          width="20"
-                          height="20"
+            <div class="add-menu__input-wrap">
+              <label class="add-menu__input-heading" for="InputId">Укажите пробег</label>
+              <div class="add-menu__output-wrap">
+                <output name="add-menu__input-range-output" id="outputRangeStartId">179300</output>
+                <output name="add-menu__input-range-output" id="outputRangeId">189300</output>
+              </div>
+              <input
+                class="add-menu__input-range"
+                type="range"
+                min="179300"
+                max="189300"
+                value="0"
+                name="range"
+                step="50"
+                id="inputRangeId"
+                oninput="outputRangeStartId.value = inputRangeId.min,outputRangeId.value = inputRangeId.value"
+              />
+              <ul class="add-menu__input-buttons-list">
+                <li class="add-menu__input-buttons-item">
+                  <span class="add-menu__button-label">ТО</span>
+                  <button
+                    type="button"
+                    class="add-menu__button add-menu__button--no-active"
+                    service-open
+                  >
+                    <div
+                      class="add-menu__button-second-circle add-menu__button-second-circle--no-active"
+                    >
+                      <div
+                        class="add-menu__button-third-circle add-menu__button-third-circle--no-active"
+                      >
+                        <div
+                          class="add-menu__button-fourth-circle add-menu__button-fourth-circle--no-active"
                         >
-                          <use href="./images/symbol-defs.svg#icon-add_button"></use>
-                        </svg>
+                          <svg class="add-menu__button-icon" width="30" height="30">
+                            <use href="./images/symbol-defs.svg#icon-car-service"></use>
+                          </svg>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </button>
-              </div>
-              <div class="input-wrap">
-                <!-- <input
-                  type="text"
-                  id="test-1"
-                  name="test-1"
-                  class="circle-range-select"
-                  value="10;360"
-                  data-boundry="10;360"
-                  data-min="0"
-                  data-max="360"
-                  data-unit="$"
-                /> -->
-              </div>
+                  </button>
+                </li>
+                <li class="add-menu__input-buttons-item">
+                  <span class="add-menu__button-label">Ремонт</span>
+                  <button
+                    type="button"
+                    class="add-menu__button add-menu__button--no-active"
+                    repairs-open
+                  >
+                    <div
+                      class="add-menu__button-second-circle add-menu__button-second-circle--no-active"
+                    >
+                      <div
+                        class="add-menu__button-third-circle add-menu__button-third-circle--no-active"
+                      >
+                        <div
+                          class="add-menu__button-fourth-circle add-menu__button-fourth-circle--no-active"
+                        >
+                          <svg class="add-menu__button-icon" width="25" height="25">
+                            <use href="./images/symbol-defs.svg#icon-car-repairs"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                </li>
+                <li class="add-menu__input-buttons-item">
+                  <spa class="add-menu__button-label">Расходы</spa>
+                  <button type="button" class="add-menu__button add-menu__button--no-active">
+                    <div
+                      class="add-menu__button-second-circle add-menu__button-second-circle--no-active"
+                    >
+                      <div
+                        class="add-menu__button-third-circle add-menu__button-third-circle--no-active"
+                      >
+                        <div
+                          class="add-menu__button-fourth-circle add-menu__button-fourth-circle--no-active"
+                        >
+                          <svg class="add-menu__button-icon" width="25" height="25">
+                            <use href="./images/symbol-defs.svg#icon-car-money"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                </li>
+                <li class="add-menu__input-buttons-item">
+                  <span class="add-menu__button-label">Сохранить</span>
+                  <button type="button" class="add-menu__button" service-close>
+                    <div class="add-menu__button-second-circle">
+                      <div class="add-menu__button-third-circle">
+                        <div class="add-menu__button-fourth-circle">
+                          <svg class="add-menu__button-icon" width="20" height="20">
+                            <use href="./images/symbol-defs.svg#icon-done"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </button>
+                </li>
+              </ul>
+              <form class="add-menu__service-input-wrap visually-hidden" service>
+                <p class="add-menu__input-heading">Что заменяли на последнем ТО?</p>
+                <div class="add-menu__service-checkbox-wrap">
+                  <label class="add-menu__service-checkbox-label">
+                    <input type="checkbox" name="service" value="oil" />
+                    Масло
+                  </label>
+                  <label class="add-menu__service-checkbox-label">
+                    <input type="checkbox" name="service" value="oil-filter" />
+                    Фильтр масла
+                  </label>
+                  <label class="add-menu__service-checkbox-label">
+                    <input type="checkbox" name="service" value="air-filter" />
+                    Воздушный фильтр
+                  </label>
+                  <label class="add-menu__service-checkbox-label">
+                    <input type="checkbox" name="service" value="cabin-filter" />
+                    Фильтр салона
+                  </label>
+                </div>
+              </form>
+              <form class="visually-hidden" action="" repairs>
+                <p class="add-menu__input-heading">Выберите опцию</p>
+                <label for="">
+                  <select class="select-css">
+                    <option>Дополнительное ТО</option>
+                    <option>Ремонт</option>
+                    <option>Расходники</option>
+                    <option>Другое</option>
+                  </select>
+                </label>
+              </form>
             </div>
           </div>
         </div>
@@ -244,6 +363,7 @@
     </main>
     <script src="./js/add-menu.js" type="module"></script>
     <script src="./js/menu.js" type="module"></script>
-    <script src="./js/range-input.js" type="module"></script>
+    <script src="./js/service-input.js" type="module"></script>
+    <script src="./js/repairs-input.js" type="module"></script>
   </body>
 </html>
